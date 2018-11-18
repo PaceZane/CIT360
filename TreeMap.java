@@ -1,17 +1,14 @@
 /*
 *  Here are just a few examples of working with Treemap
  */
-package TreeMapDemo;
+package TreeMap;
 
 import java.util.Comparator;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-/**
- * @author Wayne Thomas Code Sample Provided by
- * https://www.callicoder.com/java-treemap/
- */
-public class TreeMapDemo {
+
+public class TreeMap{
 
     public static void main(String[] args) {
 

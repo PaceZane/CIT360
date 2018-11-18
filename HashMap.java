@@ -2,16 +2,13 @@
 /*
  *  Here are just a few examples of working with Hashmap
  */
-package HashMapDemo;
+package HashMap;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author Wayne Thomas Code Sample Provided by
- * https://www.callicoder.com/java-hashmap/
- */
-public class HashMapDemo {
+
+public class HashMap {
 
     public static void main(String[] args) {
 

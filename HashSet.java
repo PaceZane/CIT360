@@ -1,7 +1,7 @@
 /*
  *  Here are just a few examples of working with HashSet
  */
-package HashSetDemo;
+package HashSet;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,13 +11,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-/**
- * @author Wayne Thomas Code Sample Provided by
- * https://www.callicoder.com/java-hashset/
- * Sorting examples Provided by 
- * https://beginnersbook.com/2015/09/sorting-hashset-java/
- */
-public class HashSetDemo {
+
+public class HashSet {
     public static void main(String[] args){
     
         Set<String> monthsOfTheYear = new HashSet<>();
