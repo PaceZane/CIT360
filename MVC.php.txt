@@ -1,0 +1,32 @@
+<?php 
+class Opinion_poll_model extends CI_Model 
+{ 
+    public function __construct() 
+    { 
+    	$this->load->database(); 
+    } 
+
+    public function total_votes() 
+    { 
+    	$query = $this->db->select('COUNT(choice) as choices_count')->get('js_libraries');
+        return $query->row()->choices_count; 
+    } 
+
+    public function get_results() 
+    { 
+    	$libraries = array("", "JQuery", "MooTools", "YUI Library", "Glow"); 
+        $table_rows = ''; 
+
+        for ($i = 1; $i < 5; $i++) 
+        {
+             $sql_stmt = "SELECT COUNT(choice) choices_count FROM js_libraries WHERE choice = $i;"; 
+             $result = $model->
+
+             select($sql_stmt); $table_rows .= "<tr><td>" . $ libraries [$i] . " Got:</td><td><b>" . $result[0] . "</b> votes</td></tr>"; 
+        } 
+        public function add_vote($choice) 
+        { 
+        	$ts = date("Y-m-d H:i:s"); $data = array('choice' => $choice, 'ts' => '$ts'); $this->db->insert('js_libraries', $data); 
+        } 
+   } 
+?>
