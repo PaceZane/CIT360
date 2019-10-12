@@ -1,0 +1,14 @@
+// The Model performs all the calculations needed
+
+public class CalculatorModel {
+
+    // Calculate amount of Panels needed
+    int calculatePanels;
+
+    public int getcalculatePanels(){
+
+        return calculatePanels;
+
+    }
+
+}
