@@ -1,8 +1,7 @@
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class GarageWorker
-{
-    public static void main(String[] args)
-    {
+public class GarageWorker {
+    public static void main(String[] args) {
         System.out.println("We are going to count the vehicles in the garage");
         System.out.println();
         System.out.println("There are 50 vehicles in the garage to start with!");
@@ -11,7 +10,6 @@ public class GarageWorker
         GarageWorker garage = new GarageWorker(50);
 
         Runnable vehicleEnter = garage.new Enter();
-
         Runnable vehicleExit = garage.new Exit();
 
         Thread thread1 = new Thread(vehicleEnter);
@@ -19,56 +17,43 @@ public class GarageWorker
 
         thread1.start();
         thread2.start();
-
     }
 
-    public GarageWorker(int initialCarCount)
-    {
-        counter = initialCarCount;
+    public GarageWorker(int initialCarCount) {
+        counter = new AtomicInteger(initialCarCount);
     }
 
-    public int counter;
+    public AtomicInteger counter;
 
-    public class Enter implements Runnable
-    {
-        public Enter()
-        {
+    public class Enter implements Runnable {
+        public Enter() {
 
         }
 
-        public int increaseVehicleCount()
-        {
-            return ++counter;
+        public int increaseVehicleCount() {
+            return counter.incrementAndGet;
         }
 
-        public void run()
-        {
-            while (counter < 100)
-            {
+        public void run() {
+            while (counter < 100) {
                 System.out.println("One vehicle entered the garage now there are " + increaseVehicleCount());
             }
         }
     }
 
-    public class Exit implements Runnable
-    {
-        public Exit()
-        {
+    public class Exit implements Runnable {
+        public Exit() {
 
         }
 
-        public int  decreaseVehicleCount()
-        {
-            return --counter;
+        public int decreaseVehicleCount() {
+            return counter.decrementAndGet;
         }
 
-        public void run()
-        {
-            while (counter > 0)
-            {
+        public void run() {
+            while (counter > 0) {
                 System.out.println("One vehicle left the garage now there are " + decreaseVehicleCount());
             }
         }
-
     }
 }
