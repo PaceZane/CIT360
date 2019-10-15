@@ -4,10 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import org.json.*;
 
-/**
- *
- * @author Thomas https://www.youtube.com/watch?v=wDVH3qnXv74
- */
+
 public class WriteToJSON {
 
     public static void main(String[] args) {
